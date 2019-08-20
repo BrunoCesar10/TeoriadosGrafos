@@ -1,10 +1,10 @@
-## TeoriadosGrafos
+# TeoriadosGrafos
 
 Código simples de representação de grafos usando a linguagem Java
 
 O código roda no console do NetBeans
 
-#Para cadastrar grafos:
+Para cadastrar grafos:
 
 Execute o programa
 
