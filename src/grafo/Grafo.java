@@ -10,22 +10,30 @@ public class Grafo{
         System.out.print("Digite o número de vértices do Grafo: ");
         int n = scan.nextInt();
         scan.nextLine();
-        int grafo[][] = new int[n][n];
+        int m = 0;
+        int grafo[][] = new int[n + 1][n + 1];
         for (int i = 0; i < grafo.length; i++){
             for (int j = 0; j < grafo.length; j++){
                 grafo[i][j] = 0;
             }
         }
-        System.out.println("Deseja adicionar uma aresta ao Grafo? Responda apenas sim ou não: ");
-        String resposta = scan.next();
-        while ("sim".equals(resposta)){
+        for (int k = 0; k < grafo.length; k++){
+            grafo[k][0] = k;
+            grafo[0][k] = m;
+            m++;
+        }
+        System.out.println("Deseja adicionar uma aresta ao Grafo? Responda 1 para continuar, qualquer outro input terminará o grafo: ");
+        String resposta = scan.nextLine();
+        while ("1".equals(resposta)){
             System.out.println("Vértice de origem: ");
             int origem = scan.nextInt();
             System.out.println("Vértice de destino: ");
             int destino = scan.nextInt();
-            grafo[origem - 1][destino - 1] = 1;
-            System.out.println("Deseja adicionar uma aresta ao Grafo? Responda apenas sim ou não: ");
-            resposta = scan.next();
+            System.out.println("Digite o peso da aresta:");
+            int peso = scan.nextInt();
+            grafo[origem][destino] = peso;
+            System.out.println("Deseja adicionar uma aresta ao Grafo? Responda 1 para continuar, qualquer outro input terminará o grafo: ");
+            resposta = scan.nextLine();
         }
         System.out.println("");
         System.out.println("Representação do grafo: ");
