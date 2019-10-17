@@ -28,7 +28,7 @@ public class GrafoDirecionado {
         for(int i = 0; i < vertices; i++){
             System.out.print("Vértice " + i + " é adjacente a " );
             for(int j = 0; j < vertices; j++){
-                if(grafo[i][j] == 1){
+                if(grafo[i][j] != 0){
                     System.out.print(j + " ");
                 }
             }
