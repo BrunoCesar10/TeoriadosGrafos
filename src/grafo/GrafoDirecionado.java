@@ -10,8 +10,8 @@ public class GrafoDirecionado {
         grafo = new int[vertices][vertices]; 
     }
     
-    public void adicionarAresta(int origem, int destino){
-        grafo[origem][destino] = 1;
+    public void adicionarAresta(int origem, int destino, int peso){
+        grafo[origem][destino] = peso;
     }
     
     public void printGrafo(){
