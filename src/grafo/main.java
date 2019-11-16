@@ -3,8 +3,14 @@ package grafo;
 
 public class main {
     public static void main(String[] args) {
-        GrafoNaoDirecionado grafo = new GrafoNaoDirecionado(5);
-        grafo.adicionarAresta(0, 1, 6);
+        GrafoDirecionado grafo = new GrafoDirecionado(5);
+        grafo.adicionarAresta(0, 1, 1);
+        grafo.adicionarAresta(0, 2, 1);
+        grafo.adicionarAresta(1, 3, 1);
+        grafo.adicionarAresta(2, 1, 1);
+        grafo.adicionarAresta(2, 3, 1);
+        grafo.adicionarAresta(3, 4, 1);
+        /*grafo.adicionarAresta(0, 1, 6);
         grafo.adicionarAresta(0, 3, 1);
         grafo.adicionarAresta(1, 2, 5);
         grafo.adicionarAresta(1, 3, 2);
@@ -12,10 +18,11 @@ public class main {
         grafo.adicionarAresta(2, 4, 5);
         grafo.adicionarAresta(3, 4, 1);
         grafo.printGrafo();
-        /*grafo.getAdjacentes();
+        grafo.getAdjacentes();
         System.out.println(grafo.ehRegular());
         System.out.println(grafo.ehCompleto());
         grafo.Dijkstra(1);*/
-        grafo.gerarArvore();
+        grafo.printarGrafo();
+        grafo.ordenarTopologica();
     }
 }

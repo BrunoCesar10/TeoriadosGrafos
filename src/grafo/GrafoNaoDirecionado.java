@@ -18,7 +18,7 @@ public class GrafoNaoDirecionado {
         grafo[destino][origem] = peso;
     }
     
-    public void printGrafo(){
+    public void printarGrafo(){
         System.out.println("Grafo Criado: ");
         for (int i = 0; i < vertices; i++){
             for (int j = 0; j < vertices; j++){

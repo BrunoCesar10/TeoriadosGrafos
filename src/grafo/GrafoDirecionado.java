@@ -2,6 +2,7 @@
 package grafo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GrafoDirecionado {
     int vertices;
@@ -16,7 +17,7 @@ public class GrafoDirecionado {
         grafo[origem][destino] = peso;
     }
     
-    public void printGrafo(){
+    public void printarGrafo(){
         System.out.println("Grafo Criado: ");
         for (int i = 0; i < vertices; i++){
             for (int j = 0; j < vertices; j++){
@@ -82,14 +83,25 @@ public class GrafoDirecionado {
     }*/
     
     public void ordenarTopologica(){
-        Vertice listaDeVertices[] = new Vertice[vertices];
+        ArrayList<Vertice> listaDeVertices = new ArrayList<>();
         
         for (int i = 0; i < vertices; i++){
-            for(int j = 0; j < vertices; j++){
+            listaDeVertices.add(new Vertice(i, 0));
+        }
+        
+        for (int i = 0; i < vertices; i++){
+            for (int j = 0; j < vertices; j++){
                 if (grafo[i][j] > 0){
-                    
+                    listaDeVertices.get(j).setGrauDeEntrada(listaDeVertices.get(j).getGrauDeEntrada() + 1);
                 }
             }
+        }
+        
+        Collections.sort(listaDeVertices);
+        
+        System.out.println("Ordenação topológica: ");
+        for (Vertice vertice : listaDeVertices) {
+            System.out.print("Vértice " + vertice.getNome() + "->");
         }
     }
 }

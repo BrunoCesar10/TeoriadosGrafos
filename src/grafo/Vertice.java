@@ -2,10 +2,19 @@
 package grafo;
 
 public class Vertice implements Comparable<Vertice>{
-    int grauDeEntrada;
+    int nome, grauDeEntrada;
     
-    public Vertice(int grauDeEntrada){
+    public Vertice(int nome, int grauDeEntrada){
+        this.nome = nome;
         this.grauDeEntrada = grauDeEntrada;
+    }
+
+    public int getNome() {
+        return nome;
+    }
+
+    public void setNome(int nome) {
+        this.nome = nome;
     }
 
     public int getGrauDeEntrada() {
