@@ -1,6 +1,8 @@
 
 package grafo;
 
+import java.util.ArrayList;
+
 public class GrafoDirecionado {
     int vertices;
     int grafo[][];
@@ -78,4 +80,16 @@ public class GrafoDirecionado {
     /*public boolean ehConexo(){
         
     }*/
+    
+    public void ordenarTopologica(){
+        Vertice listaDeVertices[] = new Vertice[vertices];
+        
+        for (int i = 0; i < vertices; i++){
+            for(int j = 0; j < vertices; j++){
+                if (grafo[i][j] > 0){
+                    
+                }
+            }
+        }
+    }
 }
