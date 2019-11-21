@@ -187,4 +187,10 @@ public class GrafoNaoDirecionado {
             System.out.println(" ");
         }
     }
+    
+    public void buscarArticulacao(int inicio){
+        ArrayList<Integer> verticesVisitados = new ArrayList<>();
+        verticesVisitados.add(inicio);
+        
+    }
 }
