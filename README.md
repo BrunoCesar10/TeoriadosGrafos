@@ -1,19 +1,21 @@
 # TeoriadosGrafos
 
-Código simples de representação de grafos usando a linguagem Java
+Código simples de representação de grafos usando a linguagem Java.
 
-O código roda no console do NetBeans
+O Grafo e suas manipulações são representados no console.
 
-# Para cadastrar grafos:
+# Cadastrando Grafos:
 
-Execute o programa
+Para cadastar um grafo, no método main, instancie um objeto da classe **GrafoNaoDirecionado** ou da classe **GrafoDirecionado**.
 
-A pergunta **"Digite o número de vértices do Grafo:"** irá aparecer no console, responda com um número inteiro
+Para adicionar uma aresta no Grafo previamente cadastrado, utilize o método **adicionarAresta(origem, destino, peso)** no objeto.
 
-Após adicionar os vértices a pergunta **"Deseja adicionar uma aresta ao Grafo? Responda 1 para continuar, qualquer outro input terminará o grafo: "** aparecerá no console
+Para exibir o Grafo cadastrado, utilize o método **printarGrafo()** no objeto.
 
-Respondendo "1" permite adicionar arestas ao Grafo, qualquer outro input finaliza o programa
+Todos os métodos serão executados quando o código for executado na própria IDE sendo utilizada.
 
-Após a confirmação de que a aresta será adicionada, o programa pergunta **o vértice de origem, de destino e o peso da aresta**, todas as respostas aqui devem ser números, e os vértices de origem e destino devem existir no grafo
+# Métodos de Manipulação dos Grafos:
 
-A representação do grafo aparece no console após o programa ser finalizado
+## Árvore Geradora Mínima:
+
+A Árvore Geradora Mínima é calculada em um Grafo **Não Direcionado apenas**, utilizando o método **gerarArvore()**.
