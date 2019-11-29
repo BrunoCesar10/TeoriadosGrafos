@@ -79,10 +79,6 @@ public class GrafoNaoDirecionado {
         return true;
     }
     
-    /*public boolean ehConexo(){
-        
-    }*/
-    
     public void Dijkstra(int inicio){
         int distancias[] = new int[vertices];
         int verticeAnterior[] = new int[vertices];

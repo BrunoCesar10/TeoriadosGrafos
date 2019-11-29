@@ -78,10 +78,6 @@ public class GrafoDirecionado {
         return true;
     }
     
-    /*public boolean ehConexo(){
-        
-    }*/
-    
     public void ordenarTopologica(){
         ArrayList<Vertice> listaDeVertices = new ArrayList<>();
         
